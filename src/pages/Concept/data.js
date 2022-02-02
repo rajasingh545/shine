@@ -14,7 +14,7 @@ export const CONCEPT_DATA = [
     route: '',
   },
   {
-    title: 'Animal',
+    title: 'Animals',
     id: 3,
     image:
       'https://images.news18.com/ibnlive/uploads/2021/10/animal-day-163328888916x9.jpg',
