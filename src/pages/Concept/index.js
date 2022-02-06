@@ -16,12 +16,7 @@ const Concept = ({navigation}) => {
       <TouchableOpacity
         style={styles.conceptWrapper}
         onPress={() => navigation.navigate('Sensory', {title: item.title})}>
-        <Image
-          style={styles.imageStyle}
-          source={{
-            uri: item.image,
-          }}
-        />
+        <Image style={styles.imageStyle} source={item.image} />
         <Text style={styles.textStyle}>{item.title}</Text>
       </TouchableOpacity>
     );
@@ -47,16 +42,14 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
   },
   conceptWrapper: {
-    flex: 1,
     paddingHorizontal: SIZES.w_5,
     marginTop: SIZES.h_10,
   },
   imageStyle: {
-    flex: 1,
     height: SIZES.height / 6,
+    width: SIZES.width / 2 - SIZES.w_10,
     resizeMode: 'cover',
-    borderTopRightRadius: SIZES.w_10,
-    borderTopLeftRadius: SIZES.w_10,
+    borderRadius: SIZES.w_10,
   },
   textStyle: {
     ...FONTS.h5,

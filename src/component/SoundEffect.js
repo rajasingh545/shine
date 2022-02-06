@@ -22,12 +22,7 @@ const SoundEffect = ({audio, image, name}) => {
   const play = () => state.play();
   return (
     <TouchableOpacity style={styles.conceptWrapper} onPress={play}>
-      <Image
-        style={styles.imageStyle}
-        source={{
-          uri: image,
-        }}
-      />
+      <Image style={styles.imageStyle} source={image} />
       <Text style={styles.textStyle}>{name}</Text>
     </TouchableOpacity>
   );
@@ -41,12 +36,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
   },
   conceptWrapper: {
-    flex: 1,
     paddingHorizontal: SIZES.w_5,
     marginTop: SIZES.h_10,
+    overflow: 'hidden',
   },
   imageStyle: {
-    flex: 1,
+    width: SIZES.width / 2 - SIZES.w_10,
     height: SIZES.height / 6,
     resizeMode: 'cover',
     borderRadius: SIZES.w_10,
