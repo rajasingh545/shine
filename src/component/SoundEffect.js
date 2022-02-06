@@ -1,27 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useContext} from 'react';
 import {Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import {SIZES, colors, FONTS} from '../constant';
-
-var Sound = require('react-native-sound');
-Sound.setCategory('Playback');
+import {SoundContext} from '../hooks';
 
 const SoundEffect = ({audio, image, name}) => {
-  const [state, setState] = useState(
-    new Sound(audio, Sound.MAIN_BUNDLE, error => {
-      if (error) {
-        console.log('failed to load the sound', error);
-        return;
-      }
-    }),
-  );
+  const {play, initialize, stop} = useContext(SoundContext);
 
   useEffect(() => {
-    return () => state.release();
+    return () => stop();
   }, []);
 
-  const play = () => state.play();
+  const playSound = async () => {
+    await initialize(audio);
+    await play();
+  };
   return (
-    <TouchableOpacity style={styles.conceptWrapper} onPress={play}>
+    <TouchableOpacity style={styles.conceptWrapper} onPress={playSound}>
       <Image style={styles.imageStyle} source={image} />
       <Text style={styles.textStyle}>{name}</Text>
     </TouchableOpacity>

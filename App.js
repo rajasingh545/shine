@@ -9,11 +9,14 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {AppRoute} from './src/routes';
+import {soundContext, SoundContext} from './src/hooks';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <AppRoute />
+      <SoundContext.Provider value={soundContext}>
+        <AppRoute />
+      </SoundContext.Provider>
     </NavigationContainer>
   );
 };
