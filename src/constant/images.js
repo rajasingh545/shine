@@ -36,11 +36,11 @@ const nose_picking = require('../assest/Bad_habits_and_sounds/nose_picking.jpg')
 const suck_thumb = require('../assest/Bad_habits_and_sounds/suck_thumb.jpg');
 
 // Nature and sounds
-const Rain = require('../assest/Nature_and_sounds/Rain.jpg');
+const Rain = require('../assest/Nature_and_sounds/Rain.jpeg');
 const Thunder = require('../assest/Nature_and_sounds/Thunder.jpg');
 const Waterfalls = require('../assest/Nature_and_sounds/Waterfalls.jpeg');
-const Waves = require('../assest/Nature_and_sounds/Waves.jpg');
-const Wind = require('../assest/Nature_and_sounds/Wind.png');
+const Waves = require('../assest/Nature_and_sounds/Waves.jpeg');
+const Wind = require('../assest/Nature_and_sounds/Wind.jpeg');
 
 // Good habits and sound
 const bath_daily = require('../assest/Good_habits_and_sounds/bath_daily.jpg');
@@ -49,6 +49,9 @@ const prayers_daily = require('../assest/Good_habits_and_sounds/prayers_daily.jp
 const sleep_early = require('../assest/Good_habits_and_sounds/sleep_early.jpg');
 const Wake_up_early = require('../assest/Good_habits_and_sounds/Wake_up_early.jpg');
 const Wash_your_hands = require('../assest/Good_habits_and_sounds/Wash_your_hands.jpg');
+
+// System iocns
+const home_icon = require('../assest/icon/Home_icon.png');
 
 export {
   Cat,
@@ -89,4 +92,5 @@ export {
   Good_habits_icon,
   Nature_icon,
   Transport_icon,
+  home_icon,
 };

@@ -147,9 +147,9 @@ export const SENSORY_DATA = {
     data: [
       {
         id: 1,
-        name: 'Bath Daily',
-        sound: constant.bath_daily_voice,
-        image: constant.bath_daily,
+        name: 'Wake up early',
+        sound: constant.Wake_up_early_voice,
+        image: constant.Wake_up_early,
       },
       {
         id: 2,
@@ -159,27 +159,27 @@ export const SENSORY_DATA = {
       },
       {
         id: 3,
-        name: 'Pray Daily',
-        sound: constant.prayers_daily_voice,
-        image: constant.prayers_daily,
+        name: 'Bath Daily',
+        sound: constant.bath_daily_voice,
+        image: constant.bath_daily,
       },
       {
         id: 4,
-        name: 'Sleep Early',
-        sound: constant.sleep_early_voice,
-        image: constant.sleep_early,
-      },
-      {
-        id: 5,
-        name: 'Wake up early',
-        sound: constant.Wake_up_early_voice,
-        image: constant.Wake_up_early,
+        name: 'Pray Daily',
+        sound: constant.prayers_daily_voice,
+        image: constant.prayers_daily,
       },
       {
         id: 6,
         name: 'Wash your hands',
         sound: constant.Wash_your_hands_voice,
         image: constant.Wash_your_hands,
+      },
+      {
+        id: 6,
+        name: 'Sleep Early',
+        sound: constant.sleep_early_voice,
+        image: constant.sleep_early,
       },
     ],
   },
