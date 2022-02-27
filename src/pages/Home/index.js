@@ -19,8 +19,9 @@ const Home = ({navigation}) => {
     return (
       <TouchableOpacity
         onPress={() =>
-          navigation.navigate('Concept', {
+          navigation.navigate(item.route, {
             title: item.title,
+            flag: item.flag,
           })
         }
         style={styles.conceptWrapper}>

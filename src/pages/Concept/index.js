@@ -10,12 +10,14 @@ import {
 import {colors, FONTS, SIZES} from '../../constant';
 import {CONCEPT_DATA} from './data';
 
-const Concept = ({navigation}) => {
+const Concept = ({navigation, route}) => {
+  const {flag} = route.params;
+
   const renderItem = ({item}) => {
     return (
       <TouchableOpacity
         style={styles.conceptWrapper}
-        onPress={() => navigation.navigate('Sensory', {title: item.title})}>
+        onPress={() => navigation.navigate(flag, {title: item.title})}>
         <Image style={styles.imageStyle} source={item.image} />
         <Text style={styles.textStyle}>{item.title}</Text>
       </TouchableOpacity>
@@ -24,7 +26,7 @@ const Concept = ({navigation}) => {
   return (
     <View style={styles.container}>
       <FlatList
-        data={CONCEPT_DATA}
+        data={CONCEPT_DATA[flag].data}
         keyExtractor={item => `concept-${item.id}`}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}

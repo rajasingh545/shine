@@ -52,6 +52,8 @@ const Wash_your_hands = require('../assest/Good_habits_and_sounds/Wash_your_hand
 
 // System iocns
 const home_icon = require('../assest/icon/Home_icon.png');
+const success = require('../assest/icon/checked.png');
+const failure = require('../assest/icon/failure.png');
 
 export {
   Cat,
@@ -93,4 +95,6 @@ export {
   Nature_icon,
   Transport_icon,
   home_icon,
+  success,
+  failure,
 };

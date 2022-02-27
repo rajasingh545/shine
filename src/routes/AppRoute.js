@@ -1,10 +1,9 @@
 import React from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {Concept, Sensory, Home} from '../pages';
-import {colors, home_icon, SIZES} from '../constant';
+import {Concept, Conceptual, Sensory, Home} from '../pages';
+import {home_icon, SIZES} from '../constant';
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +42,16 @@ const AppRoute = () => {
       <Stack.Screen
         name={`Sensory`}
         component={Sensory}
+        options={({route, navigation}) => ({
+          title: route.params.title,
+          headerRight: () => (
+            <HomeButton onPress={() => navigation.navigate('Home')} />
+          ),
+        })}
+      />
+      <Stack.Screen
+        name={`Conceptual`}
+        component={Conceptual}
         options={({route, navigation}) => ({
           title: route.params.title,
           headerRight: () => (
