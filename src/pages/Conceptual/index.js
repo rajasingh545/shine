@@ -9,9 +9,20 @@ import {
   SafeAreaView,
 } from 'react-native';
 import _ from 'lodash';
+var Sound = require('react-native-sound');
 
-import {colors, FONTS, SIZES, success, failure} from '../../constant';
+import {
+  colors,
+  FONTS,
+  SIZES,
+  success,
+  failure,
+  correct_answer,
+  wrong_answer,
+} from '../../constant';
 import {CONCEPTUAL_DATA, OPTION} from './data';
+
+Sound.setCategory('Playback');
 
 const Conceptual = ({route}) => {
   const {title} = route.params;
@@ -23,7 +34,20 @@ const Conceptual = ({route}) => {
     })),
   );
 
-  console.log('Answers : ', answers);
+  const [state] = useState({
+    success: new Sound(correct_answer, Sound.MAIN_BUNDLE, error => {
+      if (error) {
+        console.log('failed to load the sound', error);
+        return;
+      }
+    }),
+    wrong: new Sound(wrong_answer, Sound.MAIN_BUNDLE, error => {
+      if (error) {
+        console.log('failed to load the sound', error);
+        return;
+      }
+    }),
+  });
 
   const onSelectAnswer = (index, position, answer) => {
     const result = answers.map((value, i) => {
@@ -34,6 +58,12 @@ const Conceptual = ({route}) => {
       return value;
     });
     setAnswer(result);
+    const correctAnswer = data[index].answer;
+    if (correctAnswer === answer) {
+      state.success.play();
+      return true;
+    }
+    state.wrong.play();
   };
 
   const renderItem = ({item, index}) => {

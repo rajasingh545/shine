@@ -5,6 +5,10 @@ const Bad_habits_icon = require('../assest/App_icons/Bad_habits_icon.jpg');
 const Good_habits_icon = require('../assest/App_icons/Good_habits_icon.jpg');
 const Nature_icon = require('../assest/App_icons/Nature_icon.jpeg');
 const Transport_icon = require('../assest/App_icons/Transport_icon.jpg');
+const num = require('../assest/App_icons/numbers.png');
+const shapes = require('../assest/App_icons/shapes.png');
+const colors_icon = require('../assest/App_icons/colors_icon.jpg');
+const logo = require('../assest/App_icons/logo.jpg');
 
 // Animals and sounds
 const Cat = require('../assest/Animals_and_sounds/Cat.jpg');
@@ -55,6 +59,27 @@ const home_icon = require('../assest/icon/Home_icon.png');
 const success = require('../assest/icon/checked.png');
 const failure = require('../assest/icon/failure.png');
 
+// Numbers Images
+const ballon = require('../assest/Puzzle-Number/quesimg1.jpg');
+const cherry = require('../assest/Puzzle-Number/quesimg2.jpg');
+const leafs = require('../assest/Puzzle-Number/quesimg4.jpg');
+const stars = require('../assest/Puzzle-Number/quesimg3.jpg');
+const icecream = require('../assest/Puzzle-Number/quesimg5.jpg');
+
+// Colors Image
+const red = require('../assest/Puzzle-Colors/red.jpeg');
+const blue = require('../assest/Puzzle-Colors/blue.jpg');
+const pink = require('../assest/Puzzle-Colors/pink.jpeg');
+const yellow = require('../assest/Puzzle-Colors/yellow.jpeg');
+const green = require('../assest/Puzzle-Colors/green.jpeg');
+
+// Shapes Image
+const circle = require('../assest/Puzzle-Shapes/circle.png');
+const rectangle = require('../assest/Puzzle-Shapes/rectangle.png');
+const square = require('../assest/Puzzle-Shapes/square.png');
+const star = require('../assest/Puzzle-Shapes/star.png');
+const triangle = require('../assest/Puzzle-Shapes/triangle.jpeg');
+
 export {
   Cat,
   Dog,
@@ -97,4 +122,23 @@ export {
   home_icon,
   success,
   failure,
+  ballon,
+  cherry,
+  leafs,
+  stars,
+  icecream,
+  red,
+  blue,
+  pink,
+  yellow,
+  green,
+  circle,
+  rectangle,
+  square,
+  star,
+  triangle,
+  num,
+  shapes,
+  colors_icon,
+  logo,
 };

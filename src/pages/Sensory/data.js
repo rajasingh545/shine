@@ -97,13 +97,13 @@ export const SENSORY_DATA = {
       },
       {
         id: 5,
-        name: 'Cow',
+        name: 'Horse',
         sound: constant.horse_voice,
         image: constant.Horse,
       },
       {
         id: 6,
-        name: 'Cow',
+        name: 'Lion',
         sound: constant.lion_voice,
         image: constant.Lion,
       },

@@ -45,6 +45,10 @@ const sleep_early_voice = require('../assest/Good_habits_and_sounds/sleep_early_
 const Wake_up_early_voice = require('../assest/Good_habits_and_sounds/Wake_up_early_voice.mp3');
 const Wash_your_hands_voice = require('../assest/Good_habits_and_sounds/Wash_your_hands_voice.mp3');
 
+// Answer
+const correct_answer = require('../assest/App_icons/correct-answer.mp3');
+const wrong_answer = require('../assest/App_icons/wrong-answer.mp3');
+
 export {
   dog_barking,
   barking,
@@ -80,4 +84,6 @@ export {
   sleep_early_voice,
   Wake_up_early_voice,
   Wash_your_hands_voice,
+  correct_answer,
+  wrong_answer,
 };

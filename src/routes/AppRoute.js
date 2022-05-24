@@ -2,7 +2,7 @@ import React from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import {Concept, Conceptual, Sensory, Home} from '../pages';
+import {Concept, Conceptual, Sensory, Home, Login} from '../pages';
 import {home_icon, SIZES} from '../constant';
 
 const Stack = createNativeStackNavigator();
@@ -21,7 +21,7 @@ const AppRoute = () => {
   );
 
   return (
-    <Stack.Navigator initialRouteName={`Home`}>
+    <Stack.Navigator initialRouteName={`Login`}>
       <Stack.Screen
         name={`Home`}
         component={Home}
@@ -29,6 +29,14 @@ const AppRoute = () => {
           title: 'Shine',
         }}
       />
+      <Stack.Screen
+        name={`Login`}
+        component={Login}
+        options={() => ({
+          headerShown: false,
+        })}
+      />
+
       <Stack.Screen
         name={`Concept`}
         component={Concept}

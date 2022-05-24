@@ -5,9 +5,21 @@ export const CONCEPT_DATA = {
       {
         title: 'Numbers',
         id: 1,
-        image: constant.Nature_icon,
+        image: constant.num,
         route: '',
       },
+      {
+        title: 'Colors',
+        id: 2,
+        image: constant.colors_icon,
+        route: '',
+      },
+      {
+        title: 'Shapes',
+        id: 3,
+        image: constant.shapes,
+        route: '',
+      }
     ],
   },
   Sensory: {
