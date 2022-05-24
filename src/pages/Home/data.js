@@ -7,12 +7,14 @@ export const HOME_CONCEPT = [
     title: 'Conceptual Learning',
     image:
       'https://knowledgeone.ca/wp-content/uploads/2020/08/kids-learning.jpg',
-    route: '',
+    route: 'Concept',
+    flag: 'Conceptual',
   },
   {
     id: 2,
     title: 'Sensory Learning',
     image: 'https://knowledgeone.ca/wp-content/uploads/2018/03/engagement.jpg',
-    route: '',
+    route: 'Concept',
+    flag: 'Sensory',
   },
 ];
