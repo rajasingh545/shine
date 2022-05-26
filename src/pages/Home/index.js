@@ -46,7 +46,7 @@ const Home = ({navigation}) => {
       </View>
       {/* Concept */}
       <View style={styles.conceptContainer}>
-        <Text style={styles.conceptTitle}>{HOME_CONCEPT_TITLE}</Text>
+        {/* <Text style={styles.conceptTitle}>{HOME_CONCEPT_TITLE}</Text> */}
         <FlatList
           data={HOME_CONCEPT}
           keyExtractor={item => `concept-${item.id}`}
@@ -69,15 +69,16 @@ const styles = StyleSheet.create({
   wrapper: {
     paddingHorizontal: SIZES.w_10,
     marginTop: SIZES.h_10,
-    marginBottom: SIZES.h_10,
+    marginBottom: SIZES.h_15,
   },
   title: {
     ...FONTS.h2,
     color: colors.black,
+    alignSelf: 'center'
   },
   content: {
-    ...FONTS.body3,
-    color: colors.regularLightGray,
+    ...FONTS.lato_h4,
+    color: colors.black,
     textAlign: 'justify',
     marginTop: SIZES.h_5,
   },
@@ -97,12 +98,14 @@ const styles = StyleSheet.create({
   },
   imageStyle: {
     flex: 1,
-    height: SIZES.height / 4,
+    height: SIZES.height / 5,
     borderRadius: SIZES.w_10,
     marginBottom: SIZES.w_5,
   },
   conceptText: {
     ...FONTS.h5,
+    marginTop: SIZES.h_5,
     color: colors.black,
+    alignSelf: 'center'
   },
 });
