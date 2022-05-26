@@ -5,23 +5,16 @@ import {SIZES, colors, FONTS} from '../constant';
 var Sound = require('react-native-sound');
 Sound.setCategory('Playback');
 
-const SoundEffect = ({audio, image, name}) => {
-  const [state, setState] = useState(
-    new Sound(audio, Sound.MAIN_BUNDLE, error => {
-      if (error) {
-        console.log('failed to load the sound', error);
-        return;
-      }
-    }),
-  );
+const SoundEffect = ({audio, image, name, manager}) => {
 
-  useEffect(() => {
-    return () => state.release();
-  }, []);
 
-  const play = () => state.play();
+  // useEffect(() => {
+  //   return () => state.release();
+  // }, []);
+
+  //const play = () => state.play();
   return (
-    <TouchableOpacity style={styles.conceptWrapper} onPress={play}>
+    <TouchableOpacity style={styles.conceptWrapper} onPress={()=>manager(audio)}>
       <Image style={styles.imageStyle} source={image} />
       <Text style={styles.textStyle}>{name}</Text>
     </TouchableOpacity>

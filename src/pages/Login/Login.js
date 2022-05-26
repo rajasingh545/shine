@@ -111,9 +111,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: SIZES.w_10,
     marginTop: SIZES.h_10 * 3,
     marginBottom: SIZES.h_5,
+    alignItems: 'center'
   },
   textWarapper: {
     paddingHorizontal: SIZES.w_10,
+    alignItems: 'center'
   },
   smTxt: {
     ...FONTS.body2,
@@ -129,7 +131,7 @@ const styles = StyleSheet.create({
   },
   form: {
     marginTop: SIZES.h_10 * 8,
-    paddingHorizontal: SIZES.w_10,
+    paddingHorizontal: SIZES.w_10 * 4,
   },
   label: {
     ...FONTS.h5,
@@ -144,7 +146,7 @@ const styles = StyleSheet.create({
     color: colors.black,
   },
   inputWrapper: {
-    marginBottom: SIZES.h_10,
+    marginBottom: SIZES.h_10*2,
   },
   btn: {
     marginTop: SIZES.h_5,
